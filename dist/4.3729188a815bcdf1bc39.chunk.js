@@ -1888,7 +1888,7 @@ exports = module.exports = __webpack_require__(16)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -1994,7 +1994,7 @@ module.exports = function(vm) {
       name: ""
     },
     formOptions: {
-      formOptions: []
+      type: [['text', "文本类型"], ['checkbox', "checkbox类型"], ['select', "下拉框类型"], ['integer', "整数"], ['percent', "percent"], ['textarea', "文本区域,产品的更详细的信息"], ['date', "日期类型"], ['datetime', "时间"]]
     },
     formRules: {
       rules1: []
@@ -2031,7 +2031,7 @@ var render = function render() {
       data: _vm.tbList
     }
   })], 1)])], 1), _vm._v(" "), _c("div", { staticStyle: { width: "500px" } }), _vm._v(" "), _c("Modal", {
-    attrs: { title: "-" },
+    attrs: { title: "商品属性" },
     on: {
       "on-ok": _vm.save,
       "on-cancel": function onCancel($event) {
@@ -2060,7 +2060,8 @@ var render = function render() {
       },
       expression: "formData.code"
     }
-  })], 1), _vm._v(" "), _c("FormItem", { attrs: { label: "属性类型:" } }, [_c("Input", {
+  })], 1), _vm._v(" "), _c("FormItem", { attrs: { label: "属性类型:" } }, [_c("Select", {
+    attrs: { disabled: _vm.operationType == "edit" },
     model: {
       value: _vm.formData.type,
       callback: function callback($$v) {
@@ -2068,7 +2069,9 @@ var render = function render() {
       },
       expression: "formData.type"
     }
-  })], 1), _vm._v(" "), _c("FormItem", { attrs: { label: "属性名:" } }, [_c("Input", {
+  }, _vm._l(_vm.formOptions.type, function (option) {
+    return _c("Option", { key: option[0], attrs: { value: option[0] } }, [_vm._v(_vm._s(option[1]))]);
+  }))], 1), _vm._v(" "), _c("FormItem", { attrs: { label: "属性名:" } }, [_c("Input", {
     model: {
       value: _vm.formData.name,
       callback: function callback($$v) {
