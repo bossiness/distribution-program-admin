@@ -1779,7 +1779,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var HTTP_URL = "/api/product/attributes";
 exports.default = {
-  name: "page",
   data: function data() {
     return (0, _property2.default)(this);
   },
@@ -1818,9 +1817,7 @@ exports.default = {
       var vm = this;
       vm.$http.get("" + HTTP_URL).then(function (res) {
         vm.tbList = res.data.records;
-      }, function (err) {
-        console.log(err);
-      });
+      }, function (err) {});
     },
     del: function del(code) {
       var vm = this;
@@ -1888,7 +1885,7 @@ exports = module.exports = __webpack_require__(16)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
